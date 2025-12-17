@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 
 export default function ContactUs() {
@@ -8,71 +7,25 @@ export default function ContactUs() {
     {
       icon: '📞',
       title: 'Call Us Directly',
-      details: '+91 98765 43210',
+      details: '+91 9893310008',
       description: 'Speak with our cotton experts directly',
       subtitle: 'Available Mon-Fri 9am-6pm',
-      action: 'tel:+919876543210',
+      action: 'tel:+91 9893310008',
       color: 'from-green-500 to-emerald-600'
     },
     {
       icon: '📧',
       title: 'Send Us an Email',
-      details: 'sales@kmcotex.com',
+      details: 'kmind_anjad@yahoo.co.in',
       description: 'Get detailed quotes and product information',
       subtitle: 'Response within 24 hours',
-      action: 'mailto:sales@kmcotex.com',
+      action: 'mailto:kmind_anjad@yahoo.co.in',
       color: 'from-blue-500 to-cyan-600'
     },
-    {
-      icon: '💬',
-      title: 'WhatsApp Business',
-      details: '+91 98765 43210',
-      description: 'Quick queries and instant responses',
-      subtitle: 'Online 24/7 for quick replies',
-      action: 'https://wa.me/919876543210',
-      color: 'from-green-400 to-teal-500'
-    },
-    {
-      icon: '📍',
-      title: 'Visit Our Factory',
-      details: '123 Cotton Road, Textile City',
-      description: 'See our manufacturing process firsthand',
-      subtitle: 'Schedule a factory tour',
-      action: 'https://maps.google.com',
-      color: 'from-orange-500 to-amber-600'
-    }
+   
   ];
 
-  const departments = [
-    {
-      name: 'Sales & Pricing',
-      contact: 'sales@kmcotex.com',
-      phone: '+91 98765 43211',
-      description: 'Product inquiries, pricing, and orders',
-      icon: '💰'
-    },
-    {
-      name: 'Technical Support',
-      contact: 'tech@kmcotex.com',
-      phone: '+91 98765 43212',
-      description: 'Product specifications and technical details',
-      icon: '🔧'
-    },
-    {
-      name: 'Quality Control',
-      contact: 'quality@kmcotex.com',
-      phone: '+91 98765 43213',
-      description: 'Quality standards and certifications',
-      icon: '⭐'
-    },
-    {
-      name: 'Export Department',
-      contact: 'export@kmcotex.com',
-      phone: '+91 98765 43214',
-      description: 'International orders and shipping',
-      icon: '🌍'
-    }
-  ];
+  ;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-cyan-50">
@@ -88,29 +41,7 @@ export default function ContactUs() {
               Ready to experience premium quality cotton? Get in touch with our team for samples, pricing, and expert consultation.
             </p>
             
-            {/* Animated Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-              <div className="text-center p-4 bg-white rounded-2xl shadow-lg border border-gray-100">
-                <div className="text-2xl text-sky-600 mb-2">🚀</div>
-                <div className="text-2xl font-bold text-gray-800">24h</div>
-                <div className="text-gray-600 text-sm">Response Time</div>
-              </div>
-              <div className="text-center p-4 bg-white rounded-2xl shadow-lg border border-gray-100">
-                <div className="text-2xl text-green-600 mb-2">💬</div>
-                <div className="text-2xl font-bold text-gray-800">4+</div>
-                <div className="text-gray-600 text-sm">Contact Methods</div>
-              </div>
-              <div className="text-center p-4 bg-white rounded-2xl shadow-lg border border-gray-100">
-                <div className="text-2xl text-amber-600 mb-2">🌍</div>
-                <div className="text-2xl font-bold text-gray-800">15+</div>
-                <div className="text-gray-600 text-sm">Countries Served</div>
-              </div>
-              <div className="text-center p-4 bg-white rounded-2xl shadow-lg border border-gray-100">
-                <div className="text-2xl text-purple-600 mb-2">⭐</div>
-                <div className="text-2xl font-bold text-gray-800">30+</div>
-                <div className="text-gray-600 text-sm">Years Experience</div>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -165,39 +96,7 @@ export default function ContactUs() {
           </div>
         </div>
 
-        {/* Department Contacts */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              Department <span className="text-sky-600">Contacts</span>
-            </h2>
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-              Connect with the right team for your specific requirements
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl shadow-xl p-6 border border-gray-100 hover:shadow-2xl transition-all duration-300"
-              >
-                <div className="text-3xl mb-4 text-sky-600">{dept.icon}</div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{dept.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{dept.description}</p>
-                
-                <div className="space-y-2">
-                  <a href={`mailto:${dept.contact}`} className="block text-sky-600 hover:text-sky-700 font-medium text-sm">
-                    📧 {dept.contact}
-                  </a>
-                  <a href={`tel:${dept.phone}`} className="block text-gray-700 hover:text-gray-900 font-medium text-sm">
-                    📞 {dept.phone}
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+      
 
         {/* Interactive Map Section */}
         <div className="mb-20">
@@ -221,7 +120,7 @@ export default function ContactUs() {
                       <span className="text-2xl">🏭</span>
                       <div>
                         <div className="font-semibold">Modern Facility</div>
-                        <div className="text-sky-100 text-sm">50,000 sq. ft. manufacturing unit</div>
+                        <div className="text-sky-100 text-sm">348,480 sq ft manufacturing unit</div>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
@@ -251,8 +150,8 @@ export default function ContactUs() {
                     <span className="text-2xl text-sky-600">📍</span>
                     <div>
                       <h4 className="font-bold text-gray-800">KM Cotex Manufacturing Unit</h4>
-                      <p className="text-gray-600">123 Cotton Road, Textile Industrial Area</p>
-                      <p className="text-gray-600">Textile City - 123456</p>
+                      <p className="text-gray-600">46, Gandhi Marg, Barwani Road, Anjad Dist. Barwani (M.P) 451556</p>
+                      {/* <p className="text-gray-600">Textile City - 123456</p> */}
                     </div>
                   </div>
 
@@ -275,7 +174,7 @@ export default function ContactUs() {
                   </div>
 
                   <a 
-                    href="https://maps.google.com"
+                    href="\https://maps.app.goo.gl/YUNpucpyh5cLKGBG8?g_st=iw"
                     className="inline-flex items-center space-x-2 bg-sky-500 text-white px-6 py-3 rounded-xl font-bold hover:bg-sky-600 transition duration-300"
                   >
                     <span>🗺️</span>

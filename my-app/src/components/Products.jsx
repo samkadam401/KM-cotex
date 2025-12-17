@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 
 export default function ProductsPage() {
@@ -16,36 +14,53 @@ export default function ProductsPage() {
   const products = [
     {
       id: 1,
-      name: "Organic Cotton Yarn",
-      description: "100% certified organic cotton yarn for premium textile production",
+      name: "Cotton Bales",
+      description: "High-quality cotton bales suitable for textile and industrial applications.",
       features: ["GOTS Certified", "Chemical Free", "Sustainable Farming", "Premium Quality"],
       growth: 85,
-      image: "🧵"
+      
     },
     {
       id: 2,
-      name: "Cotton Fabric Rolls",
-      description: "High-quality cotton fabric rolls for fashion and home textiles",
+      name: "Cotton Seeds",
+      description: "Quality cotton seeds suitable for industrial and agricultural use.",
       features: ["Multiple Weaves", "Various GSM", "Eco-Friendly Dyes", "Custom Width"],
       growth: 72,
-      image: "📜"
+      
     },
     {
       id: 3,
-      name: "Cotton Blends",
-      description: "Innovative cotton blends for specialized applications",
+      name: "Cotton Seed Oil",
+      description: "Refined cotton seed oil suitable for various commercial uses.",
       features: ["Cotton-Polyester", "Cotton-Linen", "Stretch Blends", "Technical Textiles"],
       growth: 68,
-      image: "🔬"
+    
     },
     {
       id: 4,
-      name: "Specialty Cotton",
-      description: "Premium specialty cotton for luxury applications",
+      name: "Cotton Seed Cake",
+      description: "High-quality cotton seed cake suitable for animal feed and agricultural applications.",
       features: ["Egyptian Cotton", "Pima Cotton", "Organic Colors", "Luxury Finish"],
       growth: 91,
-      image: "👑"
+   
+    },
+    {
+      id: 5,
+      name: "Chickpea",
+      description: "High-quality chickpeas, carefully selected and suitable for diverse culinary and commercial applications. ",
+      features: ["Egyptian Cotton", "Pima Cotton", "Organic Colors", "Luxury Finish"],
+      growth: 91,
+   
+    },
+    {
+      id: 6,
+      name: "Maize",
+      description: "Carefully selected maize suitable for various commercial and industrial applications",
+      features: ["Egyptian Cotton", "Pima Cotton", "Organic Colors", "Luxury Finish"],
+      growth: 91,
+   
     }
+
   ];
 
   const growthData = {
@@ -62,7 +77,8 @@ export default function ProductsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-br from-sky-30 via-white to-cyan-50 pt-24 sm:pt-28 md:pt-32">
+
       {/* Header */}
       <div className="relative overflow-hidden bg-white shadow-sm">
         <div className="container mx-auto px-4 py-8">
@@ -85,107 +101,8 @@ export default function ProductsPage() {
 
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
-        {/* Growth Overview Section */}
-        <div className="mb-16">
-          <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
-            <div className="flex flex-col lg:flex-row gap-8 items-center">
-              {/* Growth Stats */}
-              <div className="flex-1">
-                <h2 className="text-3xl font-bold text-gray-800 mb-6">Market Growth & Performance</h2>
-                
-                <div className="grid grid-cols-2 gap-6 mb-8">
-                  <div className="text-center p-6 bg-sky-50 rounded-2xl border border-sky-100">
-                    <div className="text-3xl font-bold text-sky-600 mb-2">
-                      {animatedStats ? "78%" : "0%"}
-                    </div>
-                    <div className="text-gray-600">Annual Growth</div>
-                  </div>
-                  <div className="text-center p-6 bg-green-50 rounded-2xl border border-green-100">
-                    <div className="text-3xl font-bold text-green-600 mb-2">
-                      {animatedStats ? "92%" : "0%"}
-                    </div>
-                    <div className="text-gray-600">Customer Satisfaction</div>
-                  </div>
-                  <div className="text-center p-6 bg-amber-50 rounded-2xl border border-amber-100">
-                    <div className="text-3xl font-bold text-amber-600 mb-2">
-                      {animatedStats ? "45+" : "0"}
-                    </div>
-                    <div className="text-gray-600">Countries Served</div>
-                  </div>
-                  <div className="text-center p-6 bg-purple-50 rounded-2xl border border-purple-100">
-                    <div className="text-3xl font-bold text-purple-600 mb-2">
-                      {animatedStats ? "15K+" : "0"}
-                    </div>
-                    <div className="text-gray-600">Monthly Production</div>
-                  </div>
-                </div>
-
-                {/* Growth Graph */}
-                <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
-                  <h3 className="text-xl font-bold text-gray-800 mb-4">Revenue Growth Trend</h3>
-                  <div className="flex items-end justify-between h-40 space-x-2">
-                    {growthData.yearly.map((value, index) => (
-                      <div key={index} className="flex-1 flex flex-col items-center">
-                        <div 
-                          className="w-full bg-gradient-to-t from-sky-400 to-cyan-500 rounded-t-lg transition-all duration-1000 ease-out"
-                          style={{ 
-                            height: animatedStats ? `${value}%` : '0%',
-                            transitionDelay: `${index * 200}ms`
-                          }}
-                        ></div>
-                        <div className="text-xs text-gray-600 mt-2">Y{2020 + index}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Growth Highlights */}
-              <div className="flex-1">
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4 p-6 bg-gradient-to-r from-sky-500 to-cyan-600 rounded-2xl text-white">
-                    <span className="text-2xl">📈</span>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Rapid Market Expansion</h3>
-                      <p className="text-sky-100">78% growth in international markets with 15+ new countries added this year.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4 p-6 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl text-white">
-                    <span className="text-2xl">🌱</span>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Sustainable Growth</h3>
-                      <p className="text-green-100">65% reduction in water consumption while increasing production capacity.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start space-x-4 p-6 bg-gradient-to-r from-amber-500 to-orange-600 rounded-2xl text-white">
-                    <span className="text-2xl">⭐</span>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Quality Recognition</h3>
-                      <p className="text-amber-100">92% customer satisfaction rate with multiple industry awards.</p>
-                    </div>
-                  </div>
-
-                  {/* Contact CTA Box */}
-                  <div className="flex items-start space-x-4 p-6 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl text-white">
-                    <span className="text-2xl">📞</span>
-                    <div>
-                      <h3 className="font-bold text-lg mb-2">Get Current Pricing</h3>
-                      <p className="text-purple-100">Contact our sales team for real-time pricing and custom quotations.</p>
-                      <button 
-                        onClick={() => handleContactClick("All Products")}
-                        className="mt-3 bg-white text-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-gray-100 transition duration-300"
-                      >
-                        Contact Sales Team
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        
 
         {/* Products Grid */}
         <div className="mb-16">
@@ -208,37 +125,6 @@ export default function ProductsPage() {
                     </div>
                   </div>
 
-                  {/* Growth Indicator */}
-                  <div className="mb-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-600 font-medium">Market Demand</span>
-                      <span className="text-green-600 font-bold">{product.growth}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <div 
-                        className="bg-gradient-to-r from-green-400 to-emerald-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: animatedStats ? `${product.growth}%` : '0%' }}
-                      ></div>
-                    </div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="grid grid-cols-2 gap-2 mb-6">
-                    {product.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2 text-sm text-gray-600">
-                        <span className="text-green-500">✓</span>
-                        <span>{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Pricing Note */}
-                  <div className="mb-4 p-4 bg-blue-50 rounded-xl border border-blue-200">
-                    <div className="flex items-center text-blue-800">
-                      <span className="text-lg mr-2">💬</span>
-                      <span className="text-sm font-medium">Contact us for current market pricing and bulk discounts</span>
-                    </div>
-                  </div>
 
                   {/* Contact Button */}
                   <button 
@@ -269,85 +155,26 @@ export default function ProductsPage() {
               <div className="text-3xl mb-4">📦</div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Bulk Orders</h3>
               <p className="text-gray-600 mb-4">Special discounts for large quantity orders</p>
-              <button 
-                onClick={() => handleContactClick("Bulk Orders")}
-                className="bg-sky-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-sky-600 transition duration-300"
-              >
-                Get Quote
-              </button>
+             
             </div>
 
             <div className="text-center p-6 bg-green-50 rounded-2xl border border-green-100">
               <div className="text-3xl mb-4">🎯</div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Custom Requirements</h3>
               <p className="text-gray-600 mb-4">Tailored solutions for specific needs</p>
-              <button 
-                onClick={() => handleContactClick("Custom Requirements")}
-                className="bg-green-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-green-600 transition duration-300"
-              >
-                Discuss Needs
-              </button>
+              
             </div>
 
             <div className="text-center p-6 bg-amber-50 rounded-2xl border border-amber-100">
               <div className="text-3xl mb-4">📞</div>
               <h3 className="text-xl font-bold text-gray-800 mb-2">Immediate Assistance</h3>
               <p className="text-gray-600 mb-4">Talk directly with our sales team</p>
-              <button 
-                onClick={() => handleContactClick("Immediate Assistance")}
-                className="bg-amber-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-amber-600 transition duration-300"
-              >
-                Call Now
-              </button>
+              
             </div>
           </div>
         </div>
 
-        {/* Additional Growth Metrics */}
-        <div className="bg-white rounded-3xl shadow-2xl p-8 border border-gray-100">
-          <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">Detailed Performance Metrics</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Production Growth */}
-            <div className="text-center p-6 bg-blue-50 rounded-2xl border border-blue-100">
-              <div className="text-4xl mb-4">🏭</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Production Capacity</h3>
-              <div className="text-3xl font-bold text-blue-600 mb-4">+65%</div>
-              <div className="w-full bg-blue-200 rounded-full h-3">
-                <div 
-                  className="bg-blue-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: animatedStats ? '65%' : '0%' }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Export Growth */}
-            <div className="text-center p-6 bg-green-50 rounded-2xl border border-green-100">
-              <div className="text-4xl mb-4">🌍</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Export Growth</h3>
-              <div className="text-3xl font-bold text-green-600 mb-4">+82%</div>
-              <div className="w-full bg-green-200 rounded-full h-3">
-                <div 
-                  className="bg-green-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: animatedStats ? '82%' : '0%' }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Sustainability Impact */}
-            <div className="text-center p-6 bg-emerald-50 rounded-2xl border border-emerald-100">
-              <div className="text-4xl mb-4">♻️</div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Eco Impact</h3>
-              <div className="text-3xl font-bold text-emerald-600 mb-4">-45%</div>
-              <div className="w-full bg-emerald-200 rounded-full h-3">
-                <div 
-                  className="bg-emerald-500 h-3 rounded-full transition-all duration-1000 ease-out"
-                  style={{ width: animatedStats ? '45%' : '0%' }}
-                ></div>
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
