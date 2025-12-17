@@ -69,12 +69,6 @@ export default function ProductsPage() {
     monthly: [20, 25, 22, 28, 32, 35, 38, 40, 42, 45, 48, 52]
   };
 
-  const handleContactClick = (productName) => {
-    // You can integrate with your contact form or email
-    alert(`Contacting about ${productName}. We'll get back to you with current pricing!`);
-    // Alternatively, scroll to contact form
-    // document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-30 via-white to-cyan-50 pt-24 sm:pt-28 md:pt-32">
@@ -127,13 +121,13 @@ export default function ProductsPage() {
 
 
                   {/* Contact Button */}
-                  <button 
-                    onClick={() => handleContactClick(product.name)}
+                  <a href="tel:9893507555"
+                    
                     className="w-full bg-gradient-to-r from-sky-500 to-cyan-600 text-white py-3 rounded-xl font-bold hover:from-sky-600 hover:to-cyan-700 transition-all duration-300 transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                   >
                     <span>📞</span>
                     <span>Contact Us for Pricing</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -179,4 +173,3 @@ export default function ProductsPage() {
     </div>
   );
 }
-
