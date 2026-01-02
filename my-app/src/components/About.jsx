@@ -44,7 +44,7 @@ export default function AboutUs() {
           
           {/* Text */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-9npm">
   About{" "}
   <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-600">
     K.M. Cotex Pvt. Ltd.
