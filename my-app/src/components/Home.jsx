@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import img from "../assets/cotton.jpg";
-import img2 from "../assets/1st.jpg";
+import per2 from "../assets/per2.jpeg";
+import per4 from "../assets/per4.jpeg";
 import bgimg from "../assets/bg.jpg";
 import { useEffect } from "react";
 
@@ -218,7 +219,7 @@ const Home = () => {
                                     <div className="relative w-64 h-64 bg-white/10 rounded-2xl border-4 border-white/30 backdrop-blur-sm overflow-hidden shadow-2xl">
                                         <div
                                             className="w-full h-full bg-center bg-cover"
-                                            style={{ backgroundImage: `url(${img2})` }}
+                                            style={{ backgroundImage: `url(${per2})` }}
                                         ></div>
 
                                         {/* Photo Frame Decoration */}
@@ -310,7 +311,7 @@ const Home = () => {
                                     <div className="relative w-64 h-64 bg-white/10 rounded-2xl border-4 border-white/30 backdrop-blur-sm overflow-hidden shadow-2xl">
                                         <div
                                             className="w-full h-full bg-center bg-cover"
-                                            style={{ backgroundImage: `url(${img2})` }}
+                                            style={{ backgroundImage: `url(${per2})` }}
                                         ></div>
                                         {/* Photo Frame Decoration */}
                                         <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/50"></div>
@@ -344,7 +345,7 @@ const Home = () => {
                                     <div className="relative w-64 h-64 bg-white/10 rounded-2xl border-4 border-white/30 backdrop-blur-sm overflow-hidden shadow-2xl">
                                         <div
                                             className="w-full h-full bg-center bg-cover"
-                                            style={{ backgroundImage: `url(${img2})` }}
+                                            style={{ backgroundImage: `url(${per2})` }}
                                         ></div>
                                         {/* Photo Frame Decoration */}
                                         <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/50"></div>
@@ -433,7 +434,7 @@ const Home = () => {
                                     <div className="relative w-64 h-64 bg-white/10 rounded-2xl border-4 border-white/30 backdrop-blur-sm overflow-hidden shadow-2xl">
                                         <div
                                             className="w-full h-full bg-center bg-cover"
-                                            style={{ backgroundImage: `url(${img2})` }}
+                                            style={{ backgroundImage: `url(${per4})` }}
                                         ></div>
                                         {/* Photo Frame Decoration */}
                                         <div className="absolute top-4 right-4 w-8 h-8 border-t-2 border-r-2 border-white/50"></div>

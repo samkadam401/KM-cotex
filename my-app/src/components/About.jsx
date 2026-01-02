@@ -1,5 +1,41 @@
+import gallery1 from "../assets/gallery1.jpeg";
+import gallery2 from "../assets/gallery2.jpeg";
+import gallery3 from "../assets/gallery3.jpeg";
+import gallery4 from "../assets/gallery4.jpeg";
+import gallery5 from "../assets/gallery5.jpeg";
+import gallery6 from "../assets/gallery6.jpeg";
+import gallery7 from "../assets/gallery7.jpeg";
+import gallery8 from "../assets/gallery8.jpeg";
+import gallery9 from "../assets/gallery9.jpeg";
+import gallery10 from "../assets/gallery10.jpeg";
+import gallery11 from "../assets/gallery11.jpeg";
+import gallery12 from "../assets/gallery12.jpeg";
+import gallery13 from "../assets/gallery13.jpeg";
+import gallery14 from "../assets/gallery14.jpeg";
+
 export default function AboutUs() {
+   const images = [
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+  gallery7,
+  gallery8,
+  gallery9,
+  gallery10,
+  gallery11,
+   gallery12,
+    gallery13,
+     gallery14,
+];
+
+
+
   return (
+
+    
     <div className="min-h-screen bg-gradient-to-br from-sky-50 via-white to-cyan-50 pt-24 sm:pt-28 md:pt-32">
 
       {/* HERO SECTION */}
@@ -8,11 +44,13 @@ export default function AboutUs() {
           
           {/* Text */}
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-600">
-                K.M. Cotex Pvt. Ltd.
-              </span>
-            </h1>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 mb-8">
+  About{" "}
+  <span className="whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-600">
+    K.M. Cotex Pvt. Ltd.
+  </span>
+</h1>
+
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               We are a trusted name in cotton manufacturing, delivering premium-quality
               cotton products with a strong commitment to sustainability, innovation,
@@ -158,34 +196,23 @@ export default function AboutUs() {
 
      
 
-     {/* FACTORY GALLERY */}
-<section className="container mx-auto px-4 py-20">
+     <section className="container mx-auto px-4 py-20">
   <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-4">
     Our Manufacturing Gallery
   </h2>
+
   <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
     A glimpse into our cotton manufacturing facilities, showcasing our
     advanced infrastructure, quality processes, and skilled workforce.
   </p>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    {[
-      "https://images.unsplash.com/photo-1581092334394-08a6e58e7f2b",
-      "https://images.unsplash.com/photo-1581090700227-1e37b190418e",
-      "https://images.unsplash.com/photo-1605000797499-95a51c5269ae",
-      "https://images.unsplash.com/photo-1581091012184-5c7a1c9c8c1d",
-      "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952",
-      "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc",
-    ].map((img, index) => (
+    {images.map((img, index) => (
       <div
         key={index}
-        className="group relative overflow-hidden rounded-2xl shadow-xl"
+        className="group relative h-72 w-full rounded-2xl overflow-hidden shadow-xl bg-center bg-cover"
+        style={{ backgroundImage: `url(${img})` }}
       >
-        <img
-          src={img}
-          alt={`Factory ${index + 1}`}
-          className="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500"
-        />
         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
           <span className="text-white font-semibold text-lg">
             Cotton Factory View
@@ -195,6 +222,7 @@ export default function AboutUs() {
     ))}
   </div>
 </section>
+
 
 
     </div>
